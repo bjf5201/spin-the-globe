@@ -1,6 +1,6 @@
 {
   "name": "spin-the-globe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get a list of top 50 most populated country names or a randomly generated country name from a list",
   "main": "src/index.js",
   "scripts": {
