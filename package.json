@@ -1,0 +1,26 @@
+{
+  "name": "country-names",
+  "version": "1.0.0",
+  "description": "Get a list of top 50 most populated country names or a randomly generated country name from a list",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com:bethanyfannin/country-names.git"
+  },
+  "keywords": [
+    "random",
+    "countries"
+  ],
+  "author": "Bethany Fannin <contact@bethanyfannin.com> (https://www.bethanyfannin.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjf5201/country-names/issues"
+  },
+  "homepage": "https://github.com/bjf5201/country-names#readme",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
