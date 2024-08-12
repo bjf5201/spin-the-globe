@@ -3,5 +3,5 @@ var countries = require('./countries.json');
 
 module.exports = {
   all: countries,
-  random: unique(countries.countries)
+  random: random(countries.countries)
 };
