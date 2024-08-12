@@ -17,9 +17,9 @@
   "author": "Bethany Fannin <contact@bethanyfannin.com> (https://www.bethanyfannin.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bjf5201/country-names/issues"
+    "url": "https://github.com/bjf5201/spin-the-globe/issues"
   },
-  "homepage": "https://github.com/bjf5201/country-names#readme",
+  "homepage": "https://github.com/bjf5201/spin-the-globe#readme",
   "dependencies": {
     "unique-random-array": "1.0.0"
   }
