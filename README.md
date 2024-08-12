@@ -1,21 +1,21 @@
-# County Names
+# Spin the Globe
 
 Playing with NPM JavaScript libraries.
 
 ## Installation
 
 ```bash
-npm install country-names
+npm install spin-the-globe
 ```
 
 ## Usage
 
 ```javascript
-var cn = require('country-names');
+var spin = require('spin-the-globe');
 
-console.log(cn.all);
+console.log(spin.all);
 /* Displays the entire list of countries */
 
-console.log(cn.random());
+console.log(spin.random());
 /* Displays a random country */
 ```
