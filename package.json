@@ -1,14 +1,17 @@
 {
   "name": "spin-the-globe",
-  "version": "1.0.1",
+  "type": "module",
+  "version": "0.0.0-development",
   "description": "Get a list of top 50 most populated country names or a randomly generated country name from a list",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js --require esm",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "git+github.com:bethanyfannin/spin-the-globe.git"
+    "url": "https://github.com/bjf5201/spin-the-globe.git"
   },
   "keywords": [
     "random",
@@ -21,6 +24,29 @@
   },
   "homepage": "https://github.com/bjf5201/spin-the-globe#readme",
   "dependencies": {
+    "@stylistic/eslint-plugin": "2.6.2",
+    "eslint": "9.9.0",
+    "global": "4.4.0",
     "unique-random-array": "1.0.0"
+  },
+  "devDependencies": {
+    "chai": "5.1.1",
+    "esm": "3.2.25",
+    "mocha": "10.7.3",
+    "semantic-release": "24.1.0"
+  },
+  "release": {
+    "branches": ["+([0-9])?(.{+([0-9]),x}).x", "master", "main", "next", "next-major", { "name": "beta", "prerelease": true }, { "name": "alpha", "prerelease": true}],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ],
+    "repositoryUrl": "https://www.github.com/bjf5201/spin-the-globe"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   }
 }
