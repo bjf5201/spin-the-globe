@@ -1,7 +1,12 @@
-var random = require('unique-random-array');
-var countries = require('./countries.json');
+import uniqueRandomArray from "unique-random-array";
+import countries from "./countries.json" assert { type: "json"};
+import buildRandomArr from "./buildRandomArr.js";
 
-module.exports = {
-  all: countries,
-  random: random(countries.countries)
+const mainExport = {
+  all: countries.countries,
+  random: uniqueRandomArray(countries.countries),
+  build: buildRandomArr
 };
+
+
+export default mainExport;
