@@ -43,5 +43,10 @@ describe("spin-the-globe", () => {
       var randomItem = spin.build();
       expect(spin.all).to.include(randomItem);
     });
+
+    it("should return a single random item if passed 1 as an argument", () => {
+      var randomItems = spin.build(1);
+      expect(randomItems).to.have.length(1);
+    })
   });
 });
