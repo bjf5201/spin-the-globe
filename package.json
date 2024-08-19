@@ -1,14 +1,15 @@
 {
   "name": "spin-the-globe",
   "type": "module",
-  "version": "2.0.0",
+  "version": "0.0.0-development",
   "description": "Get a list of top 50 most populated country names or a randomly generated country name from a list",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/index.test.js --require esm",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "lint": "eslint src",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
