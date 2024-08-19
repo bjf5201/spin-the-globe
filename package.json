@@ -60,7 +60,7 @@
       "@semantic-release/npm",
       "@semantic-release/github"
     ],
-    "repositoryUrl": "https://www.github.com/bjf5201/spin-the-globe"
+    "repositoryUrl": "https://github.com/bjf5201/spin-the-globe"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
