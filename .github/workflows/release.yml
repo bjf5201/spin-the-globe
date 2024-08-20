@@ -19,11 +19,11 @@ jobs:
       id-token: write # to enable use of OIDC for npm provenance
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
       - name: Install dependencies
@@ -35,9 +35,16 @@ jobs:
       - name: Check test coverage
         run: npm run coverage
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      - uses: actions/checkout@main
+      - uses: codecov/codecov-action@v4
+          with:
+            fail_ci_if_error: true # optional (default = false)
+            file: ./coverage/lcov.info # test coverage file, optional
+            flags: unittests # optional
+            name: codecov-umbrella # optional
+            verbose: true # optional (default = false)
+          env:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
