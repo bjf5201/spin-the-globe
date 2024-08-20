@@ -35,7 +35,6 @@ jobs:
       - name: Check test coverage
         run: npm run coverage
       - name: Upload coverage to Codecov
-      steps:
       - uses: actions/checkout@main
       - uses: codecov/codecov-action@v4
         with:
