@@ -6,10 +6,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/index.test.js --require esm",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test:coverage": "c8 --check-coverage --reporter=lcov --reporter=text --clean _mocha -- src/index.test.js --require esm",
+    "coverage": "c8 --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 --reporter=text npm run test",
     "lint": "eslint src",
-    "commit": "git-cz",
-    "prepare": "husky"
+    "commit": "git-cz commit"
   },
   "repository": {
     "type": "git",
@@ -32,8 +32,10 @@
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
+    "c8": "10.1.2",
     "chai": "5.1.1",
     "commitizen": "4.3.0",
+    "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "esm": "3.2.25",
     "mocha": "10.7.3",
