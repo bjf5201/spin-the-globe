@@ -45,7 +45,6 @@ jobs:
         with:
           file: ./coverage/lcov.info
           fail_ci_if_error: true
-        env:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Release new package version
