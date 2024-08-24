@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha src/index.test.js --require esm",
     "test:coverage": "c8 --check-coverage --reporter=lcov --reporter=text --clean _mocha -- src/index.test.js --require esm",
-    "coverage": "c8 --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 --reporter=text npm run test",
+    "coverage": "c8 --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 --reporter=lcov --reporter=text npm run test",
     "lint": "eslint src",
     "commit": "git-cz"
   },
