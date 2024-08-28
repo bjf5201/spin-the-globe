@@ -3,12 +3,16 @@
   "type": "module",
   "version": "0.0.0-development",
   "description": "Get a list of top 50 most populated country names or a randomly generated country name from a list",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "start": "npm run build && node ./dist/app.js",
+    "babel": "cross-env NODE_ENV=process.env.NODE_ENV npx babel src --out-dir dist --copy-files --no-copy-ignored",
+    "build": "npm run clean && npm run babel",
     "test": "mocha src/index.test.js --require esm",
     "test:coverage": "c8 --check-coverage --reporter=lcov --reporter=text --clean _mocha -- src/index.test.js --require esm",
     "coverage": "c8 --check-coverage --lines 100 --functions 100 --branches 100 --statements 100 --reporter=lcov --reporter=text npm run test",
     "lint": "eslint src",
+    "clean": "rimraf dist && mkdir dist",
     "commit": "git-cz"
   },
   "repository": {
@@ -32,6 +36,13 @@
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "7.24.8",
+    "@babel/core": "7.25.2",
+    "@babel/plugin-syntax-import-attributes": "7.24.7",
+    "@babel/plugin-transform-runtime": "7.25.4",
+    "@babel/polyfill": "7.12.1",
+    "@babel/preset-env": "7.25.4",
+    "@babel/runtime": "7.25.4",
     "c8": "10.1.2",
     "chai": "5.1.1",
     "commitizen": "4.3.0",
@@ -39,6 +50,7 @@
     "cz-conventional-changelog": "3.3.0",
     "esm": "3.2.25",
     "mocha": "10.7.3",
+    "rimraf": "6.0.1",
     "semantic-release": "24.1.0"
   },
   "release": {
@@ -69,6 +81,16 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "latest",
     "provenance": true
+  },
+  "browserslist": {
+    "production": [
+      "last 1 version",
+      "> 1%",
+      "not dead"
+    ],
+    "development": [
+      "last 1 version"
+    ]
   },
   "config": {
     "commitizen": {

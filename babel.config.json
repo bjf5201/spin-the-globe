@@ -1,0 +1,29 @@
+{
+  "targets": {
+    "browsers": "defaults",
+    "node": "current",
+    "esmodules": true
+  },
+  "ignore": [
+    "**/*.test.js"
+  ],
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-import-attributes"
+  ],
+  "env": {
+    "development": {
+      "sourceMaps": "inline",
+      "retainLines": true,
+      "compact": "auto",
+      "minified": false
+    },
+    "production": {
+      "sourceMaps": false,
+      "retainLines": false,
+      "compact": true,
+      "minified": true
+    }
+  }
+}

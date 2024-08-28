@@ -1,5 +1,5 @@
 import uniqueRandomArray from "unique-random-array";
-import countries from "./countries.json" assert { type: "json"};
+import countries from "./countries.json" with { type: "json"};
 
 var getRandomEl = uniqueRandomArray(countries.countries);
 
