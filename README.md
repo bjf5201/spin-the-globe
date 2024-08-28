@@ -1,8 +1,18 @@
 # Spin the Globe
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/bjf5201/spin-the-globe/release.yml?color=%23da7eb4)
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-Playing with NPM JavaScript libraries.
+![Codecov (with branch)](https://img.shields.io/codecov/c/github/bjf5201/spin-the-globe/main?style=flat&color=%23da7eb4)
+
+![NPM Version](https://img.shields.io/npm/v/spin-the-globe?style=flat&color=%23da7eb4)
+
+![NPM Downloads](https://img.shields.io/npm/dy/spin-the-globe?color=%23da7eb4)
+
+![GitHub contributors](https://img.shields.io/github/contributors/bjf5201/spin-the-globe?style=flat&color=%23da7eb4)
+
+Create a random array of countries without repeated entries.
 
 ## Installation
 
