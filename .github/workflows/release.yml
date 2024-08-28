@@ -47,6 +47,9 @@ jobs:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
 
+      - name: Build
+        run: npm run build
+
       - name: Release new package version
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
